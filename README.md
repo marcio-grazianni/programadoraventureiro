@@ -1,0 +1,3 @@
+# PROGRAMADORAVENTUREIRO
+## Python 3.12.3
+## Flet 0.24.1
