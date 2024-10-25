@@ -20,8 +20,11 @@ def letter_to_guess(letter):
 
 
 def main(page: ft.Page):
+    page.title = "Jogo da Forca"
+    page.window.maximized = True
     page.scroll = ft.ScrollMode.AUTO
     page.bgcolor = ft.colors.BROWN_600
+    page.padding = ft.padding.all(0)
 
     available_words = ["python", "flet", "programador", "aventureiro"]
     choiced = random.choice(available_words).upper()
@@ -77,9 +80,10 @@ def main(page: ft.Page):
 
     keyboard = ft.Container(
         col={"xs": 12, "lg": 6},
-        image_src="images/keyboard.png",
-        image_repeat=ft.ImageRepeat.NO_REPEAT,
-        image_fit=ft.ImageFit.FILL,
+        # image_src="images/keyboard.png",
+        # image_repeat=ft.ImageRepeat.NO_REPEAT,
+        # image_fit=ft.ImageFit.FILL,
+        image = ft.Image(src="images/keyboard.png", repeat=ft.ImageRepeat.NO_REPEAT, fit=ft.ImageFit.FILL),
         padding=ft.padding.only(top=150, left=80, right=80, bottom=50),
         content=ft.Row(
             wrap=True,
@@ -110,7 +114,7 @@ def main(page: ft.Page):
         ),
     )
 
-    scene = ft.Image(col=12, src="images/scene.png")
+    scene = ft.Image(col=12, src="images/scene.png", height=150)
 
     layout = ft.ResponsiveRow(
         columns=12,

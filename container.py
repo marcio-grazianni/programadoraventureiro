@@ -2,6 +2,11 @@ import flet as ft
 
 
 def main(page: ft.Page):
+    page.title = "Container"
+    page.padding = ft.padding.all(0)
+    page.window.maximized = True
+    # page.window.alignment = ft.alignment.center
+
     container = ft.Container(
         margin=ft.margin.all(0),
         padding=ft.padding.all(0),
